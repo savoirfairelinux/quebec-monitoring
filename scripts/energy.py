@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals, division
+import sys, codecs
+sys.stdout = codecs.getwriter('utf8')(sys.stdout)
+
 import lxml.html
 import urllib
-from lxml.html import parse, fromstring
+from lxml.html import fromstring
 
 template_host = (
 """
@@ -42,7 +46,7 @@ define service {
        host_name                        energy
        service_description              energy
        display_name                     Énergies
-       notes                            Principaux serveurs DNS.
+       notes                            Bilan des interruptions par région.
        check_command                    bp_rule!%(all_host)s
        business_rule_output_template    $(x)$
        servicegroups                    main
@@ -62,9 +66,10 @@ def main():
    page_source = response.read()
    root = lxml.html.fromstring(page_source)
    url_list = root.xpath('//td//@href')
+   url_list.append("http://pannes.hydroquebec.com/pannes/bilan-interruptions-service/#bis")
    regions_list = root.xpath('//td//text()')
    regions_list = [r[0] for r in chunks(regions_list, 5)]
-   regions_list = regions_list[:-1]
+   regions_list[-1] = u"Across Québec"
 
    all_host = []
 
@@ -75,7 +80,6 @@ def main():
        print template_service % {'order': order + 1, 'alias': alias, 'url': url}
        all_host.append('hydroquebec_%d,hydroquebec_%d' % (order + 1, order + 1))
 
-   all_host.append("hydroquebec_total,hydroquebec_total")
    print business_rule % {'all_host': '&'.join(all_host)}
 
 if __name__ == '__main__':
