@@ -33,6 +33,7 @@
 .banner__left {
     font-size: 2.286em;
     font-family: $open_sansregular;
+    line-height: 1.3;
 }
 
 .elipse { 
@@ -57,7 +58,7 @@
     }
 }
 
-// BANNER-BOTTOM
+// BANNER-BOTTOM (STICKY FOOTER)
 // =====================================================================
 
 .banner-bottom {

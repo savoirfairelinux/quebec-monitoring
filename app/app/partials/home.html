@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="row">
-    <div class="banner margin-mobile clearfix transparent" id="banner">
+  <div class="row-fluid">
+    <div class="banner clearfix transparent" id="banner">
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <div class="d-line d-line--2x d-line--green banner__left">
-          Condition de l'ensemble des infrastructures au Québec
+          Condition de l'ensemble des infrastructures informatiques au Québec
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -16,25 +16,23 @@
     </div>
   </div>
   
-  <div class="row">
+  <div class="row-fluid">
     <div clas="col-sm-12">
-      <h2 class="margin-mobile homepage-title d-line d-line--green d-line--2x">En ce moment au Québec</h2>
+      <h2 class="homepage-title d-line d-line--green d-line--2x">En ce moment au Québec</h2>
     </div>
   </div>
 
-  <div class="row">
-    <div class="margin-mobile">
-      <div class="infras__box col-lg-3 col-md-4 col-sm-4 col-xs-6" ng-repeat="box in boxes">
-        <a class="box box--round bordercolor_{{box.state}}" href="#/details/{{box.host_name}}">
-          <div class="box__inner">
-            <div class="box__inner_center">
-              <i class="fa fa-3x {{box.icon_image}} icon icon--color"></i>
-              <h2 class="d-line d-line--after d-line--centered d-line--2x">{{box.display_name}}</h2>
-              <div class="box__status color_{{box.state}}"> {{box.output}} </div>
-            </div>
+  <div class="row clearfix">
+    <div class="infras__box col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="box in boxes">
+      <a class="box {{box.display_name}} box--round bordercolor_{{box.state}}" href="#/details/{{box.host_name}}">
+        <div class="box__inner">
+          <div class="box__inner_center">
+            <i class="fa fa-3x {{box.icon_image}} icon icon--color"></i>
+            <h2 class="d-line d-line--after d-line--centered d-line--2x">{{box.display_name}}</h2>
+            <div class="box__status color_{{box.state}}"> {{box.output}} </div>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   </div>
 

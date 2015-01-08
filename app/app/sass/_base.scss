@@ -23,7 +23,11 @@ body {
     cursor: pointer;
 }
 
+// HELPERS
+// ===========================================================================
+
 .transparent { background: rgba(0,0,0,0.5); }
+.text-right { text-align: right; }
 .container { max-width: 957px !important; }
 
 // HEADINGS

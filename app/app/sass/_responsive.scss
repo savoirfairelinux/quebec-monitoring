@@ -1,16 +1,16 @@
-/*------------------------------------*\
-    #RESPONSIVE
-\*------------------------------------*/
 
-/* X-Large devices */
-@media (min-width: 1200px) {
+// RESPONSIVE
+// =======================================================================
+// =======================================================================
 
-}
+// X-Large devices
+// =======================================================================
 
-/* X-Large devices */
-@media (max-width: 1200px) { }
+@media (min-width: 1200px) {  }
 
-/* Large devices */
+// Large devices
+// =======================================================================
+
 @media (min-width: 992px) {
     #details-banner-right {
         border-image-source: url(../img/triangle_black.png);
@@ -24,7 +24,9 @@
     }
 }
 
-/* Medium devices */
+// Medium devices
+// =======================================================================
+
 @media(max-width: 992px) {
     .banner__left {
         margin-bottom: 0.5em;
@@ -38,11 +40,14 @@
         padding-top: 1em;
     }
 }
+
 @media (min-width: 768px) and (max-width: 992px) {
 
 }
 
-/* Small devices */
+// Small devices
+// =======================================================================
+
 @media (max-width: 768px) {
     .margin-mobile { 
         margin-left: 15px;
@@ -50,7 +55,9 @@
     }
 }
 
-/* Extra small devices */
+// Extra small devices
+// =======================================================================
+
 @media (max-width: 500px) {
     .infras__box h2 {
         margin: 0;

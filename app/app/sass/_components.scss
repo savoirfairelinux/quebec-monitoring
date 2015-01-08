@@ -35,6 +35,7 @@
     -moz-border-radius: 100%;
     border-radius: 100%;
     background-color: rgba(0,0,0,.5);
+    margin: 0 auto;
 }
 
 .box--round:hover {
@@ -83,7 +84,6 @@
     vertical-align: middle;
 }
 
-//.box .d-line:before { width: 65px; }
 .box:hover .icon--color { color: rgba(92, 92, 92, 1); }
 .box:hover .d-line:before { background: rgba(92, 92, 92, 1); }
 
@@ -156,22 +156,20 @@
     text-align: center;
     margin:40px 0;
 }
+
 .homepage-title:before {
     height: 2px;
     margin-right: auto;
     margin-left: auto;
 }
-.infras__box {
-    padding: 0;
-    //font-size: 110%;
-}
+
 .infras__box:after {
     /* trick to keep height==width
        http://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout
     */
     content: '';
     display: block;
-    margin-top: 215px;
+    margin-top: 215px; /* 100% + margin 15px */
 }
 
 // PARTIAL DETAILS
@@ -254,14 +252,6 @@
     font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-// MAP
-// =====================================================================
-
-#map {
-    height: 300px;
-    margin: 0;
-}
-
 // Partial Infos
 // =======================================================================
 
@@ -330,3 +320,12 @@
 .info-button:active {
     background-color: rgba(41, 145, 56, 0.75);
 }
+
+// MAP
+// =====================================================================
+
+#map {
+    height: 300px;
+    margin: 0;
+}
+

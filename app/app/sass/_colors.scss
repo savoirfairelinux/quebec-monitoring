@@ -9,15 +9,17 @@
  * 2: Red (Critical)
  * 3: Grey
 
-$green: #65c178;
-$orange: #f39c12;
-$red: #e74c3c;
-$grey: grey;
-
+//  Reference colors
+// =====================================================================
+    $green: #65c178;
+    $orange: #f39c12;
+    $red: #e74c3c;
+    $grey: grey;
  **/
 
 // GREEN
 // ====================================================================
+
 .bordercolor_0:hover:after {
     -moz-box-shadow: 0 8px 17px 0 rgba(101,193,120,.31);
     -webkit-box-shadow: 0 8px 17px 0 rgba(101,193,120,.31);
@@ -40,6 +42,7 @@ $grey: grey;
 
 // ORANGE
 // =====================================================================
+
 .bordercolor_1:hover:after {
     -moz-box-shadow: 0 8px 17px 0 rgba(243,156,18,.31);
     -webkit-box-shadow: 0 8px 17px 0 rgba(243,156,18,.31);
@@ -68,6 +71,7 @@ $grey: grey;
 
 // RED
 // =====================================================================
+
 .bordercolor_2:hover:after {
     -moz-box-shadow: 0 8px 17px 0 rgba(231,76,60,.31);
     -webkit-box-shadow: 0 8px 17px 0 rgba(231,76,60,.31);
@@ -91,6 +95,7 @@ $grey: grey;
 
 // GREY
 // =====================================================================
+
 .bordercolor_3:hover:after {
     -moz-box-shadow: 0 8px 17px 0 rgba(128,128,128,.31);
     -webkit-box-shadow: 0 8px 17px 0 rgba(128,128,128,.31);
@@ -100,3 +105,4 @@ $grey: grey;
 .bordercolor_3 { border-color: grey; }
 .bgcolor_3 { background-color: grey; }
 .color_3 { color: grey; }
+
