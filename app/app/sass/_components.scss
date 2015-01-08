@@ -2,99 +2,10 @@
 // =====================================================================
 // =====================================================================
 
-// PAGE-HEAD
-// =====================================================================
-
-.site-title {
-    text-align: center;
-    margin: 3.214rem;
-}
-
-.site-title a,
-.site-title a:hover,
-.site-title a:active,
-.site-title a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-// BANNER-TOP
-// =====================================================================
-
-.banner { 
-    padding: 2.143rem 0;
-
-    .d-line--after:after, 
-    .d-line:before { 
-        margin: 0 0 1rem 0;
-    }
-}
-
-.banner__left {
-    font-size: 2.286em;
-    font-family: $open_sansregular;
-}
-
-.elipse { 
-    width: 136px;
-    height: 136px;
-    -webkit-border-radius: 68px;
-    -moz-border-radius: 68px;
-    border-radius: 68px;
-}
-
-.banner__right .icon--4x { font-size: 4.8em; } 
-.banner__right { background: url('../img/barre.png') center left no-repeat; }
-.svg .banner__right { background-image: url('../img/barre.svg'); }
-
-// BANNER-BOTTOM
-// =====================================================================
-
-.banner-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 15px 0;
-    height: 90px;
-    background-color: #65c178;
-}
-
-.banner-bottom a { vertical-align: text-top; }
-
-.update-switch { 
-    padding: 35px 20px 17px 35px;
-    border-left: 1px solid #289238;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    top: auto;
-    left: auto;
-    height:90px;
-}
-
-.button-bottom {
-    border: 2px solid white;
-    display: inline-block;
-    width: 54px;
-    height: 54px;
-    background-color: rgba(101,193,120,0);   
-}
-
-.btn-lang  .btn-text { 
-    display: block;
-    line-height: 2.3em;
-    font-size: 1.5em;
-    font-weight: 400;
-    text-align: center;
-}
-
 // BOXES
 // =====================================================================
 
 .box {
-    margin: 0 15px;
     bottom: 0;
     left: 0;
     top: 0;
@@ -116,12 +27,13 @@
 .box--round {
     border-style: solid;
     border-width: 2px;
-
-    width: 210px;
-    height: 210px;
-    -webkit-border-radius: 105px;
-    -moz-border-radius: 105px;
-    border-radius: 105px;
+    width: 200px;    
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-border-radius: 100%; 
+    -moz-border-radius: 100%;
+    border-radius: 100%;
     background-color: rgba(0,0,0,.5);
 }
 
@@ -251,7 +163,7 @@
 }
 .infras__box {
     padding: 0;
-    font-size: 110%;
+    //font-size: 110%;
 }
 .infras__box:after {
     /* trick to keep height==width
@@ -259,7 +171,7 @@
     */
     content: '';
     display: block;
-    margin-top: 100%;
+    margin-top: 215px;
 }
 
 // PARTIAL DETAILS
@@ -397,8 +309,9 @@
     padding: 0;
 }
 
-.info-buttons a:hover {
-    color: white;
+.info-buttons a:hover,
+.btn:hover, .btn:focus {
+    color: white !important;
 }
 
 .info-button {

@@ -1,0 +1,133 @@
+// BANNER
+// =====================================================================
+// =====================================================================
+
+// PAGE-HEAD
+// =====================================================================
+
+.site-title {
+    text-align: center;
+    margin: 3.214rem;
+}
+
+.site-title a,
+.site-title a:hover,
+.site-title a:active,
+.site-title a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+// BANNER-TOP
+// =====================================================================
+
+.banner { 
+    padding: 30px 15px;
+
+    .d-line--after:after, 
+    .d-line:before { 
+        margin: 0 0 1rem 0;
+    }
+}
+
+.banner__left {
+    font-size: 2.286em;
+    font-family: $open_sansregular;
+}
+
+.elipse { 
+    width: 136px;
+    height: 136px;
+    -webkit-border-radius: 68px;
+    -moz-border-radius: 68px;
+    border-radius: 68px;
+}
+
+.banner__right .icon--4x { font-size: 4.8em; } 
+.banner__right { background: none; }
+
+@media (min-width: 992px) {
+    .banner__right { background: url('../img/barre.png') center left no-repeat; }
+    .svg .banner__right { background: url('../img/barre.svg') center left no-repeat; }
+}
+
+@media (max-width: 768px) {
+    .banner__right {
+        background: none;
+    }
+}
+
+// BANNER-BOTTOM
+// =====================================================================
+
+.banner-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #65c178;
+}
+
+.banner-bottom a { vertical-align: text-top; }
+.banner-bottom .button-bottom  {
+        margin-top: 15px;
+    }
+
+@media (min-width: 1200px) {
+    .banner-bottom { height: 90px; }
+}
+
+// UPDATE-SWITCH
+// =====================================================================
+
+.update-switch { 
+    padding: 15px;
+    border-top: 1px solid #289238;
+    position: relative;
+    width:100%;
+    display:block;
+    margin-top: 15px;
+}
+
+@media (min-width: 1200px) {
+    .update-switch { 
+        padding: 30px;
+        border-left: 1px solid #289238;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        top: auto;
+        left: auto;
+        height:90px;
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) { 
+    .update-switch { 
+        margin-left: -15px;
+        width: calc(100% + 30px);
+    }
+}
+
+// BUTTONS
+// =====================================================================
+
+.button-bottom {
+    border: 2px solid white;
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    background-color: rgba(101,193,120,0);   
+}
+
+.btn-lang  .btn-text { 
+    display: block;
+    line-height: 2.3em;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+}
+

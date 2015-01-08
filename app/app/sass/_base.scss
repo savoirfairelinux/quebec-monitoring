@@ -2,17 +2,8 @@
 // ===========================================================================
 // ===========================================================================
 
-/*
-$open_sansitalic: 'open_sansitalic';
-$open_sansregular: 'open_sansregular';
-$open_sansbold: 'open_sansbold';
-
-$open_sanslight: 'open_sanslight';
-$open_sanssemibold: 'open_sanssemibold';
-*/
-
 body {
-    font-family: $open_sansregular, "Helvetica Neue", Helvetica,Arial,sans-serif;
+    font-family: $open_sansregular, Helvetica, Arial, sans-serif;
     background: url("../img/montreal.jpg") no-repeat center top fixed;
     background-color: black;
     -webkit-background-size: cover;
@@ -20,10 +11,10 @@ body {
     -o-background-size: cover;
     background-size: cover;
     color: white;
-    padding-bottom: 5em;
+    padding-bottom: 12em;
 }
-
-html, body { overflow: auto !important; margin: 0; }
+/* remodal */
+/*html, body { overflow: auto !important; margin: 0; }*/
 
 .nav,
 .pagination,
@@ -32,10 +23,8 @@ html, body { overflow: auto !important; margin: 0; }
     cursor: pointer;
 }
 
-.transparent {
-    background:transparent;
-    background-color: rgba(0,0,0,.5);
-}
+.transparent { background: rgba(0,0,0,0.5); }
+.container { max-width: 957px !important; }
 
 // HEADINGS
 // ===========================================================================
@@ -52,13 +41,11 @@ h2 small { margin-left: 0.5em; }
 // LINKS
 // ===========================================================================
 
-
 a { color: #fff; }
 a:active, a:hover { color: rgba(255,255,255,0.8); }
 .link-underline a { text-decoration: underline; }
 
 // OTHER
 // ===========================================================================
-section {
-    margin-bottom: 2em;
-}
+
+section { margin-bottom: 2em; }
