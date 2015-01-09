@@ -1,98 +1,84 @@
-<div class="container">
-  <div class="row-fluid">
-    <div class="banner clearfix transparent" id="banner">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="d-line d-line--2x d-line--green banner__left">
-          Condition de l'ensemble des infrastructures informatiques au Québec
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="text-center banner__right" if="banner-right">
-          <span class="fa-stack fa-lg icon icon--4x elipse bgcolor_{{global_state}}">
-            <i class="fa {{global_state|state_to_icon}} fa-stack-1x fa-inverse banner-right_icon"></i>
-          </span>
-        </div>
-      </div>
+<div id="wrapper">
+  <header>
+    <div class="logo">
+      <h1 class="text-indent">Québec 24 / 7</h1>
+      <a class="site-title_logo" href="#/">
+        <img class="site-title_logo-img switch-svg" src="img/logo.png" alt="Québec 24/7" /> QUÉBEC <strong>24 / 7</strong> 
+        <img class="site-title_logo-beta-img switch-svg" src="img/beta.png" alt="Version Beta" /></a>
     </div>
-  </div>
-  
-  <div class="row-fluid">
-    <div clas="col-sm-12">
-      <h2 class="homepage-title d-line d-line--green d-line--2x">En ce moment au Québec</h2>
-    </div>
-  </div>
+  </header>
 
-  <div class="row clearfix">
-    <div class="infras__box col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="box in boxes">
-      <a class="box {{box.display_name}} box--round bordercolor_{{box.state}}" href="#/details/{{box.host_name}}">
-        <div class="box__inner">
-          <div class="box__inner_center">
-            <i class="fa fa-3x {{box.icon_image}} icon icon--color"></i>
-            <h2 class="d-line d-line--after d-line--centered d-line--2x">{{box.display_name}}</h2>
-            <div class="box__status color_{{box.state}}"> {{box.output}} </div>
+  <div class="container">
+    <div class="row-fluid">
+      <div class="banner clearfix transparent" id="banner">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="d-line d-line--2x d-line--green banner__left">
+            <span>Condition de l'ensemble des infrastructures informatiques au Québec</span>
           </div>
         </div>
-      </a>
-    </div>
-  </div>
-
-</div>
-
-<div class="banner-bottom">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6">
-        <a class="button-bottom btn-lang" href="#/en">
-          <span class="btn-text">EN</span>
-        </a>
-<!--
-        <a href="https://github.com/savoirfairelinux/quebec-monitoring">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-square-o fa-stack-2x"></i>
-            <i class="fa fa-stack-1x fa-github"></i>
-          </span>
-        </a>
-        <a href="https://twitter.com/share?url=http://quebec247.org&text=I%20monitor%20Quebec%20with&via=SFLinux&">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-square-o fa-stack-2x"></i>
-            <i class="fa fa-stack-1x fa-twitter"></i>
-          </span>
-        </a>
-        <a href="https://plus.google.com/share?url=http://quebec247.org">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-square-o fa-stack-2x"></i>
-            <i class="fa fa-stack-1x fa-google-plus"></i>
-          </span></a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://quebec247.org&title=Monitor%20Quebec&summary=&source=">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-square-o fa-stack-2x"></i>
-            <i class="fa fa-stack-1x fa-linkedin"></i>
-          </span></a>
-        <a href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=Monitor%20Quebec&amp;p[summary]=summary&amp;p[url]=quebec247.org&amp;p[images][0]=http://quebec247.org/img/logo.png,'sharer','toolbar=0,status=0,width=548,height=325'">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-square-o fa-stack-2x"></i>
-            <i class="fa fa-stack-1x fa-facebook"></i>
-          </span></a>
--->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="text-center banner__right" if="banner-right">
+            <span class="fa-stack fa-lg icon icon--4x elipse bgcolor_{{global_state}}">
+              <i class="fa {{global_state|state_to_icon}} fa-stack-1x fa-inverse banner-right_icon"></i>
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-6 text-right">
-        <a class="button-bottom" href="#/infos" data-remodal-target="modal">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-info fa-stack-1x"></i>
-          </span>
-        </a>
-        <a class="button-bottom" href="#/infos-fork">
-          <span class="fa fa-stack icon icon--2x">
-            <i class="fa fa-code-fork fa-stack-1x"></i>
-          </span>
+    </div>
+
+    <div class="row-fluid">
+      <div clas="col-sm-12">
+        <h2 class="homepage-title d-line d-line--green d-line--2x">En ce moment au Québec</h2>
+      </div>
+    </div>  
+
+    <div class="row clearfix">
+      <div class="infras__box col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="box in boxes">
+        <a class="box {{box.display_name}} box--round bordercolor_{{box.state}}" href="#/details/{{box.host_name}}">
+          <div class="box__inner">
+            <div class="box__inner_center">
+              <i class="fa fa-3x {{box.icon_image}} icon icon--color"></i>
+              <h2 class="d-line d-line--after d-line--centered d-line--2x">{{box.display_name}}</h2>
+              <div class="box__status color_{{box.state}}"> {{box.output}} </div>
+            </div>
+          </div>
         </a>
       </div>
     </div>
-    <div class="update-switch">
-      <form>
-        <label for="flip-checkbox-1">Mise à jour automatique:</label>
-        <input data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1" type="checkbox">
-      </form>
-    </div>
   </div>
+
+  <div class="banner-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <a class="button-bottom btn-lang" href="#/en">
+              <span class="btn-text">EN</span>
+            </a>
+          </div>
+          <div class="col-xs-6 text-right">
+            <a class="button-bottom" href="#/infos" >
+              <span class="fa fa-stack icon icon--2x">
+                <i class="fa fa-info fa-stack-1x"></i>
+              </span>
+            </a>
+            <a class="button-bottom" href="#/infos-fork">
+              <span class="fa fa-stack icon icon--2x">
+                <i class="fa fa-code-fork fa-stack-1x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="update-switch">
+          <form>
+            <label for="flip-checkbox-1">Mise à jour automatique:</label>
+            <input data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1" type="checkbox">
+          </form>
+        </div>
+      </div>
+    </div>
+    
 </div>
+
+
+
+   

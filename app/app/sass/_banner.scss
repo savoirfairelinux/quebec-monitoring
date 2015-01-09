@@ -5,17 +5,17 @@
 // PAGE-HEAD
 // =====================================================================
 
-.site-title {
+.site-title_logo {
+    @extend h1;
     text-align: center;
     margin: 3.214rem;
-}
-
-.site-title a,
-.site-title a:hover,
-.site-title a:active,
-.site-title a:visited {
-    color: white;
     text-decoration: none;
+    display: block;
+    
+    &:hover, &:active, &:visited, &:focus {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 // BANNER-TOP

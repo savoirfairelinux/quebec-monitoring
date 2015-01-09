@@ -1,66 +1,78 @@
-<div id="cross-close-details" class="cross-close">
+<div id="wrapper">
+  <div id="cross-close-details" class="cross-close">
   <a href="#/">
     <i class="fa fa-times fa-2x"></i>
   </a>
 </div>
-<div class="container" id="box-details-wrapper">
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 banner details-banner details-banner__left">
-      <div class="box box__details">
-        <i class="fa fa-4x {{box.icon_image}}"></i>
-        <h2 class="d-line d-line--centered d-line--2x">{{box.display_name}}</h2>
-        <div class="color_{{box.state}} details-box-state">{{box.output}}</div>
+
+<div id="box-details-wrapper">
+  <div class="section-botttom-border">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 banner details-banner details-banner__left">
+          <div class="box__details">
+            <i class="picto fa fa-4x {{box.icon_image}}"></i>
+            <h2 class="box-title d-line--2x ng-binding">{{box.display_name}}</h2>
+            <div class="color_{{box.state}} details-box-state">{{box.output}}</div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bgcolor_{{box.state}} banner details-banner" id="details-banner-right">
+          <div id="gauge" class="box"></div>
+        </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bgcolor_{{box.state}} banner details-banner" id="details-banner-right">
-      <div id="gauge" class="box"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="row" ng-if="box.display_map">
+      <div class="col-xs-12 box-content" id="map"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 box-content">
+        <h2 class="details-title d-line--after d-line--green d-line--2x">{{box.notes}} 
+          <small ng-if="box.notes_url">
+            <a href="{{box.notes_url}}" class="label label-default">Source</a>
+          </small>
+        </h2>
+        <tabset type="pills" id="details-tab-wrapper">
+          <tab heading="CRITICAL ({{nb_problems[2]+nb_problems[3]}})"
+               class="details-tab details-tab-critical" active="tab_critical_active">
+            <ul class="link-underline details-tab-content">
+              <li ng-repeat="elem in elements" ng-if="elem.state >= 2">
+                <a href="{{elem.action_url}}">
+                  <h3 class="details-tab-content__title">{{elem.display_name}}</h3>
+                  <div class="color_{{elem.state}}">{{elem.plugin_output}}</div>
+                </a>
+              </li>
+            </ul>
+          </tab>
+          <tab heading="WARNING ({{nb_problems[1]}})" class="details-tab details-tab-warning"
+               active="tab_warning_active">
+            <ul class="link-underline details-tab-content">
+              <li ng-repeat="elem in elements" ng-if="elem.state == 1">
+                <a href="{{elem.action_url}}">
+                  <h3 class="details-tab-content__title">{{elem.display_name}}</h3>
+                  <div class="color_{{elem.state}}">{{elem.plugin_output}}</div>
+                </a>
+              </li>
+            </ul>
+          </tab>
+          <tab heading="OK ({{nb_problems[0]}})" class="details-tab details-tab-ok"
+               active="tab_ok_active">
+            <ul class="link-underline details-tab-content">
+              <li ng-repeat="elem in elements" ng-if="elem.state == 0">
+                <a href="{{elem.action_url}}">
+                  <h3 class="details-tab-content__title">{{elem.display_name}}</h3>
+                  <div class="color_{{elem.state}}">{{elem.plugin_output}}</div>
+                </a>
+              </li>
+            </ul>
+          </tab>
+        </tabset>
+      </div>
     </div>
   </div>
-  <div class="row" ng-if="box.display_map">
-    <div class="col-xs-12 box-content" id="map"></div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 box-content">
-      <h2 class="details-title d-line--after d-line--green d-line--2x">{{box.notes}} 
-        <small ng-if="box.notes_url">
-          <a href="{{box.notes_url}}" class="label label-default">Source</a>
-        </small>
-      </h2>
-      <tabset type="pills" id="details-tab-wrapper">
-        <tab heading="CRITICAL ({{nb_problems[2]+nb_problems[3]}})"
-             class="details-tab details-tab-critical" active="tab_critical_active">
-          <ul class="link-underline details-tab-content">
-            <li ng-repeat="elem in elements" ng-if="elem.state >= 2">
-              <a href="{{elem.action_url}}">
-                <h3 class="details-tab-content__title">{{elem.display_name}}</h3>
-                <div class="color_{{elem.state}}">{{elem.plugin_output}}</div>
-              </a>
-            </li>
-          </ul>
-        </tab>
-        <tab heading="WARNING ({{nb_problems[1]}})" class="details-tab details-tab-warning"
-             active="tab_warning_active">
-          <ul class="link-underline details-tab-content">
-            <li ng-repeat="elem in elements" ng-if="elem.state == 1">
-              <a href="{{elem.action_url}}">
-                <h3 class="details-tab-content__title">{{elem.display_name}}</h3>
-                <div class="color_{{elem.state}}">{{elem.plugin_output}}</div>
-              </a>
-            </li>
-          </ul>
-        </tab>
-        <tab heading="OK ({{nb_problems[0]}})" class="details-tab details-tab-ok"
-             active="tab_ok_active">
-          <ul class="link-underline details-tab-content">
-            <li ng-repeat="elem in elements" ng-if="elem.state == 0">
-              <a href="{{elem.action_url}}">
-                <h3 class="details-tab-content__title">{{elem.display_name}}</h3>
-                <div class="color_{{elem.state}}">{{elem.plugin_output}}</div>
-              </a>
-            </li>
-          </ul>
-        </tab>
-      </tabset>
-    </div>
-  </div>
+</div>
+
 </div>

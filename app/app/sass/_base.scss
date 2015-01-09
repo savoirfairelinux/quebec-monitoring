@@ -29,6 +29,10 @@ body {
 .transparent { background: rgba(0,0,0,0.5); }
 .text-right { text-align: right; }
 .container { max-width: 957px !important; }
+.text-indent { 
+    text-indent: -99999px;
+    position: absolute;
+}
 
 // HEADINGS
 // ===========================================================================
