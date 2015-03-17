@@ -1,6 +1,6 @@
 <div id="wrapper">
   <header>
-    <div class="logo">
+    <div class="logo fade-in-down">
       <h1 class="text-indent">Québec 24 / 7</h1>
       <a class="site-title_logo" href="#/">
         <img class="site-title_logo-img switch-svg" src="img/logo.png" alt="Québec 24/7" /> QUÉBEC <strong>24 / 7</strong> 
@@ -32,7 +32,7 @@
       </div>
     </div>  
 
-    <div class="row clearfix">
+    <div class="row-fluid clearfix">
       <div class="infras__box col-lg-3 col-md-3 col-sm-4 col-xs-6" ng-repeat="box in boxes">
         <a class="box {{box.display_name}} box--round bordercolor_{{box.state}}" href="#/details/{{box.host_name}}">
           <div class="box__inner">
@@ -49,7 +49,7 @@
 
   <div class="banner-bottom">
       <div class="container">
-        <div class="row">
+        <div class="row-fluid">
           <div class="col-xs-6">
             <a class="button-bottom btn-lang" href="#/en">
               <span class="btn-text">EN</span>
@@ -68,12 +68,17 @@
             </a>
           </div>
         </div>
-        <div class="update-switch">
-          <form>
-            <label for="flip-checkbox-1">Mise à jour automatique:</label>
-            <input data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1" type="checkbox">
-          </form>
-        </div>
+
+        <div class="row-fluid">
+          <div class="col-xs-12">
+            <div class="update-switch">
+              <form>
+                <label for="flip-checkbox-1">Mise à jour automatique:</label>
+                <input data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1" type="checkbox">
+              </form>
+            </div>
+          </div>
+      </div>
       </div>
     </div>
     

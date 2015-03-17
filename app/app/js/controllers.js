@@ -42,7 +42,8 @@ angular.module('myApp.controllers', [])
         /* if we obtain n<0, global state CRITICAL
                         n>0, global state WARNING
                         n>2, global state OK */
-        $scope.global_state = (global_state < 0 ? 2 : (global_state > 2 ? 0 : 1));
+        $scope.global_state = (global_state < 0 ? 2 : (global_state > 2 ? 0 : 1));      
+
       });
 
   }])

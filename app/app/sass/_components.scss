@@ -27,10 +27,10 @@
 .box--round {
     border-style: solid;
     border-width: 2px;
-    width: 200px;    
-    height: 200px;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;    
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
     -webkit-border-radius: 100%; 
     -moz-border-radius: 100%;
     border-radius: 100%;
@@ -187,7 +187,7 @@
 .section-botttom-border { border-bottom: 1px solid black; }
 
 .details-title {
-    margin: 1em;
+    margin: 1em 0;
     font-size: 1.8em;
 }
 
@@ -218,7 +218,7 @@
     vertical-align: text-top;
 }
 .details-banner {
-    height: 180px;
+    height: 200px;
     text-align: center;
 }
 .details-banner__left {
@@ -269,7 +269,7 @@
 }
 .details-tab-content a {
     display: block;
-    padding: 15px 40px;
+    padding: 12px 5px;
     text-decoration: none
 }
 .details-tab-content a:active,
@@ -311,12 +311,13 @@
 
 .section-info h3 { font-size: 2em; }
 .section-info_content { font-size: 1.13em; }
-.section-info { line-height: 1.75; }
+.section-info { line-height: 1.75; font-size: 1.15em; }
 
 .section-top-border { 
     padding-top: 40px;
     border-top: 1px solid #299138;
-    margin-top: 20px; 
+    margin-top: 20px;
+    margin-bottom: 40px; 
 }
 
 #more-info {
@@ -363,4 +364,3 @@
     height: 300px;
     margin: 0;
 }
-

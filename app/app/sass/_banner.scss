@@ -21,6 +21,8 @@
 // BANNER-TOP
 // =====================================================================
 
+#banner { margin: 0 15px; }
+
 .banner { 
     padding: 30px 15px;
 
@@ -68,48 +70,42 @@
     right: 0;
     width: 100%;
     background-color: #65c178;
+    
+    .fa-stack-1x, .fa-stack-2x { left: -3px !important; }
+
+    .button-bottom {
+        &:hover { 
+            background-color: #45a35c;
+            text-decoration: none; 
+        }
+    }
 }
 
 .banner-bottom a { vertical-align: text-top; }
 .banner-bottom .button-bottom  {
-        margin-top: 15px;
+        margin: 15px 0;
     }
-
-@media (min-width: 1200px) {
-    .banner-bottom { height: 90px; }
-}
 
 // UPDATE-SWITCH
 // =====================================================================
 
 .update-switch { 
-    padding: 15px;
+    padding: 15px 0;
     border-top: 1px solid #289238;
-    position: relative;
-    width:100%;
-    display:block;
-    margin-top: 15px;
+    width: 100%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1420px) {
     .update-switch { 
-        padding: 30px;
         border-left: 1px solid #289238;
+        border-top: 0;
         position: fixed;
         bottom: 0;
         right: 0;
         top: auto;
         left: auto;
-        height:90px;
         width: auto;
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 768px) { 
-    .update-switch { 
-        margin-left: -15px;
-        width: calc(100% + 30px);
+        padding: 30px;
     }
 }
 
