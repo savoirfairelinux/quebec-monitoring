@@ -256,6 +256,7 @@
 }
 
 .nav-pills > li.details-tab > a:hover {
+    @extend .hover-transition-bg;
     background: rgba(255,255,255,0.07);
 }
 
@@ -286,6 +287,7 @@
 
 .details-tab-content a:active,
 .details-tab-content a:hover {
+    @extend .hover-transition-bg;
     background: rgba(255,255,255,0.1);
 }
 
@@ -323,9 +325,16 @@
     }
 }
 
-.section-info h3 { font-size: 2em; }
+.section-info h3 { font-size: 1.5em; }
+
 .section-info_content { font-size: 1.13em; }
-.section-info { line-height: 1.75; font-size: 1.15em; }
+
+.section-info { 
+    line-height: 1.5; 
+    margin: 0;
+    
+    .fa-heart { color: $btn-green; } 
+}
 
 .section-top-border { 
     padding-top: 40px;
@@ -351,6 +360,7 @@
 
 .info-buttons a:hover,
 .btn:hover, .btn:focus {
+    @extend .hover-transition-bg;
     color: white !important;
 }
 

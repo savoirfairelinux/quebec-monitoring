@@ -75,6 +75,7 @@
 
     .button-bottom {
         &:hover { 
+            @extend .hover-transition-bg;
             background-color: #45a35c;
             text-decoration: none; 
         }
