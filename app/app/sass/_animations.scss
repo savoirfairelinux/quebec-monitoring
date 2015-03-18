@@ -1,5 +1,8 @@
-// AngularJS animations
+// ANIMATIONS
 // =====================================================================
+// =====================================================================
+
+// AngularJS animations
 // =====================================================================
 
 .at-view-slide-in-bottom.ng-enter {
@@ -59,11 +62,10 @@
     opacity: 0;
 }
 
-// CSS3 animations
-// =====================================================================
+// FADE IN OUT
 // =====================================================================
 
-.fade-in-down{
+.fade-in-down {
   animation: fadeInDownAnimationFrames ease 1s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
@@ -140,6 +142,9 @@
     -ms-transform:  translate(0px,0px)  ;
   }
 }
+
+// BOUNCE OUT
+// =====================================================================
 
 .bounce-out {
   animation: bounceOutAnimationFrames linear 1s;

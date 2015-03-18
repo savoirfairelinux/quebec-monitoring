@@ -217,16 +217,20 @@
 .details-title .label {
     vertical-align: text-top;
 }
+
 .details-banner {
     height: 200px;
     text-align: center;
 }
+
 .details-banner__left {
     background-color: black;
 }
+
 .details-box-state {
     font-weight: 700;
 }
+
 .details-tab {
     width: 33.333%;
     text-align: center;
@@ -237,24 +241,29 @@
     border: 0;
     margin: 0 !important;
 }
+
 .details-tab.active {
     color: white;
     font-weight: 700;
     border-image-slice: 0% 0% 100% 0%;
     border-width: 0 0 12px 0;
 }
+
 .nav-pills > li.details-tab > a {
     background: none;
     padding: 15px 5px;
     border-radius: 0;
 }
+
 .nav-pills > li.details-tab > a:hover {
     background: rgba(255,255,255,0.07);
 }
+
 .box-content {
     padding: 0;
     background: #252525;
 }
+
 .details-tab-content {
     margin: 1.6em 0;
     list-style-type: none;
@@ -263,25 +272,30 @@
     column-count: 1;
     padding: 0;
 }
+
 .details-tab-content li {
     display: inline-block;
     width: 100%;
 }
+
 .details-tab-content a {
     display: block;
     padding: 12px 5px;
     text-decoration: none
 }
+
 .details-tab-content a:active,
 .details-tab-content a:hover {
     background: rgba(255,255,255,0.1);
 }
+
 .details-tab-content__title {
     margin: 0;
     line-height: 1.5;
     text-decoration: underline;
     font-size: 1.15em;
 }
+
 #gauge tspan {
     font-size: 1.4em !important;
 }
