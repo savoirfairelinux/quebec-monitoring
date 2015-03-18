@@ -86,7 +86,7 @@ define service {
        notes                          Services en ligne des principales banques.
        check_command                  bp_rule!%(all_banks)s
        business_rule_output_template  $(x)$
-       icon_image                     fa-btc
+       icon_image                     fa-university
 }
 """)
 
