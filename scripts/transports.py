@@ -66,7 +66,7 @@ define service {
        check_command                    bp_rule!%(all_transports)s
        business_rule_output_template    $(x)$
        servicegroups                    main
-       icon_image                       fa-arrow-circle-down
+       icon_image                       fa-bus
 }
 
 """)

@@ -53,7 +53,7 @@ define service {
        check_command                    bp_rule!%(all_dns)s
        business_rule_output_template    $(x)$
        servicegroups                    main
-       icon_image                       fa-gears
+       icon_image                       fa-sitemap
 }
 """)
 

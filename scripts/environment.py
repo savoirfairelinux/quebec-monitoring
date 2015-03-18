@@ -62,7 +62,7 @@ define service {
        check_command                    bp_rule!%(all_environments)s
        business_rule_output_template    $(x)$
        servicegroups                    main
-       icon_image                       fa-tree
+       icon_image                       fa-leaf
        notes_url                        http://www.meteomedia.com/meteo/canada/quebec/montreal
 }
 

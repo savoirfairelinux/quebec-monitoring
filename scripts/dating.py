@@ -55,7 +55,7 @@ define service {
        check_command                    bp_rule!%(all_dating)s
        business_rule_output_template    $(x)$
        servicegroups                    main
-       icon_image                       fa-heart-o
+       icon_image                       fa-heart
 }
 
 """)
