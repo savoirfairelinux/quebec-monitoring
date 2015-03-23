@@ -1,0 +1,25 @@
+// IE8
+// =====================================================================
+
+.lt-ie9 { 
+    #banner { background-color: black; }
+    .site-title_logo { margin: 2.214em 0; }
+    .homepage-title { margin: 50px 0; }
+
+    .col-md-6 { width:50%; }
+    .col-lg-3 { width:33%; }
+
+    .col-md-offset-2 { margin-left: 16.6666% }
+    .col-md-2 { width: 16.6666%; }
+    
+    .details-tab { 
+    	float: left;
+    	padding: 15px 5px;
+    	display:block;
+    }
+
+    .details-tab-content { margin: 0; }
+
+    .box__details h2.box-title:after, 
+    .box__details h2.box-title:before { left: 45%; }
+}
