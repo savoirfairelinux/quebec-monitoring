@@ -25,9 +25,11 @@ RUN apt-get update
 
 ### InfluxDB
 
-RUN wget http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb
+# RUN wget http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb
+RUN wget http://get.influxdb.org.s3.amazonaws.com/influxdb_0.8.9_amd64.deb
 
-RUN dpkg -i influxdb_latest_amd64.deb
+# RUN dpkg -i influxdb_latest_amd64.deb
+RUN dpkg -i influxdb_0.8.9_amd64.deb
 
 ### Shinken
 
@@ -50,6 +52,10 @@ RUN apt-get install -y apache2 libapache2-mod-wsgi
 
 RUN apt-get -y install supervisor
 
+## Shinken hosts/services configuration
+RUN apt-get install -y python-bs4 python-requests
+
+
 ### Configuration
 
 ## Docker
@@ -65,8 +71,6 @@ RUN chmod u+s /bin/ping6
 
 ADD app /srv/app
 
-## Shinken hosts/services configuration
-RUN apt-get install -y python-bs4 python-requests
 ADD scripts /scripts
 #RUN mkdir /etc/shinken/adagios
 RUN scripts/banks.py > etc/shinken/adagios/banks.cfg
