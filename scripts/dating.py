@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 DATING = {
-    'quebecrencontres.com': {
-        'hostname': 'quebecrencontres.com',
-        'address': '68.71.41.131',
-        'display_name': 'Quebecrencontres.com',
-        'command': 'check_quebecrencontrescom',
-    },
+    # disabled because website doesn't include anymore the number of members :
+    #'quebecrencontres.com': {
+    #    'hostname': 'quebecrencontres.com',
+    #    'address': '68.71.41.131',
+    #    'display_name': 'Quebecrencontres.com',
+    #    'command': 'check_quebecrencontrescom',
+    #},
     'reseaucontact.com': {
         'hostname': 'reseaucontact.com',
         'address': '198.178.155.41',
